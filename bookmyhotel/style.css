@@ -54,6 +54,7 @@ nav img{
 }
 
 nav ul{
+    display: none;
     float: right;
     list-style-type: none;
     margin: 0;
@@ -133,8 +134,10 @@ nav a:hover{
     }
     
 }
+
+/* minimise slidebar*/
 .closemenu{
-    display: none;
+   display: none;
     right: 2%;
     top: 1%;
     cursor: pointer;
@@ -153,7 +156,7 @@ nav a:hover{
 
 
 .openmenu{ 
-    display: none;
+   /* display: none;*/
     right: 2%;
     top: 1%;
     cursor: pointer;
@@ -172,7 +175,7 @@ nav a:hover{
 
 
 .homemenu{
-    display: none;
+    /* display: none;*/
     position: fixed;
     right: 2%;
     top: 6%;
@@ -183,7 +186,7 @@ nav a:hover{
 }
 
 .tiket{
-    display: none;
+    /* display: none;*/
     position: fixed;
     right: 2%;
     top: 11%;
@@ -194,7 +197,7 @@ nav a:hover{
 }
 
 .location{
-    display: none;
+   /* display: none;*/
     position: fixed;
     right: 2%;
     top: 16%;
@@ -206,7 +209,7 @@ nav a:hover{
 
 .Contactus{
 
-    display: none;
+    /* display: none;*/
     position: fixed;
     right: 2%;
     top: 21%;
@@ -217,15 +220,15 @@ nav a:hover{
 
 }
 
-.upbar{
+.upbar {
     display: none;
-    left: 70%;
-    top: 0;
-    z-index: -1;
-    height: 25%;
-    width: 30%;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.818);
+    z-index: -10;
+    height: 19%;
+    position: absolute;
+    width: 100%;
+    background-color: #4C3A51;
+    overflow: hidden;
+    transition: .5s;
 }
 
 
@@ -346,18 +349,16 @@ nav a:hover{
         color: white;
     
     }
-    
-    .upbar{
+    .upbar {
         display: none;
-        left: 80%;
-        top: 0;
-        z-index: -1;
-        height: 25%;
-        width: 30%;
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.818);
+        z-index: -10;
+        height: 19%;
+        position: absolute;
+        width: 100%;
+        background-color: #4C3A51;
+        overflow: hidden;
+        transition: .5s;
     }
-    
     .bookbtn{
         position: fixed;
         top: 65%;
@@ -395,15 +396,14 @@ nav a:hover{
 
 
 @media(max-width: 555px){
-    .upbar{
-        display: none;
-        left: 67%;
-        top: 0;
-        z-index: -1;
-        height: 25%;
-        width: 35%;
-        position: fixed;
-        background-color: rgba(0, 0, 0, 0.818);
+    .upbar {
+        z-index: -10;
+        height: 19%;
+        position: absolute;
+        width: 100%;
+        background-color: #4C3A51;
+        overflow: hidden;
+        transition: 0.5s;
     }
     
     .bookbtn{
