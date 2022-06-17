@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="https://kit.fontawesome.com/e509dd28a5.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
 </head>
 <body>
     <div class="background">
@@ -16,7 +17,7 @@
             <span class="namelogo">KRAVKO'S food and stay</span>
             <span title="open menu" id="openmenu" onclick="opennn()" class="openmenu"><i
                 class="fa-solid fa-bars"></i></span>
-                <span title="move away" id="closemenu" onclick="closeee()" class="closemenu"><i class="fa-regular fa-xmark-large"></i></span>
+                <span title="move away" id="closemenu" onclick="closeee()" class="closemenu"><i class="fa-solid fa-xmark"></i></span>
                 <div id="upbarr" class="upbar">
                     <span>
                         <a title="Home" id="homemenu" class="homemenu"  href="index.html">HOME <i class="fa-solid fa-house"></i></a>
@@ -54,24 +55,25 @@
         const closemenu = document.getElementById('closemenu')
         const upbarr = document.getElementById('upbarr')
 
-        console.log("hello world")
+
+        upbarr.style.maxHeight = "0%"
+        
 
         function opennn(){
-            upbarr.style.display = 'block'
-            closemenu.style.display = 'block'
-            openmenu.style.display = 'none'
-            
-        }
-
-        function closeee(){
-            upbarr.style.display = 'none'
-            closemenu.style.display = 'none'
-            openmenu.style.display = 'block'
+                console.log("hello world")
+                upbarr.style.maxHeight = "20%"
+                upbarr.style.display= 'block'
+                closemenu.style.display = 'block'
+                openmenu.style.display = 'none'
 
         }
 
-
-
+        function closeee() {
+                upbarr.style.maxHeight = "0%"
+                upbarr.style.display= 'none'
+                closemenu.style.display = 'none'
+                openmenu.style.display = 'block'    
+        }
 
 
     </script>
