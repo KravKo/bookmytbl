@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book my table</title>
+    <link rel="stylesheet" href="bookmytbl.css">
+</head>
+
+<body>
+    <div class="background">
+    <nav>
+        <img src="logo1.png" alt="logo">
+        <span class="namelogo">KRAVKO'S food and stay</span>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bookmytbl.html">Book my table</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </nav>
+    <div class="addmenu">
+        <form action="bookmytbl.html" method="post" >
+            <h1 style="margin: 10px;">Book My Table</h1>
+            <div class="formm">
+                <h3>Your Name</h3>
+                <input class="name" type="name" placeholder="your name" required>
+
+                <h3 style="padding-top: 20px;">Your Address</h3>
+                <input type="address" placeholder="your address" required>
+                <h3 style="padding-top: 20px;">Your phone no</h3>
+                <input type="number" placeholder="Phone no" required>
+                <h3 style="padding-top: 20px;">Your Email</h3>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="sel">
+                <h3>Type:</h3>
+                <select name="Type" required>
+                    <option value="Table">Table</option>
+                    <option value="Room">Room</option>
+                    <option value="Hall">Hall</option>
+                </select>
+                <h3 style="padding-top: 20px;">No of people</h3>
+                <select name="No of people" required>
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                    <option value="five">5</option>
+                    <option value="six">6</option>
+                    <option value="seven">7</option>
+                    <option value="eight">8</option>
+                    <option value="nine">9</option>
+                    <option value="ten">10</option>
+                    <option value="morethanone">More</option>
+                </select>
+                <h3  style="padding-top: 20px;">Date</h3>
+                <input required type="date">
+                <h3 style="padding-top: 20px;">Time</h3>
+                <input required type="time">
+            </div>
+            <button class="booktbl">BOOK</button>
+        </form>
+    </div>
+    <div class="menuimg">
+        <img src="menu.jpg" alt="">
+    </div>
+</div>
+</body>
+
+</html>

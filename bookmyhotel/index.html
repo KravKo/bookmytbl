@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book My Resturant</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/e509dd28a5.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <div class="background">
+        <nav>
+            <img src="logo1.png" alt="logo">
+            <span class="namelogo">KRAVKO'S food and stay</span>
+            <span title="open menu" id="openmenu" onclick="opennn()" class="openmenu"><i
+                class="fa-solid fa-bars"></i></span>
+                <span title="move away" id="closemenu" onclick="closeee()" class="closemenu"><i class="fa-regular fa-xmark-large"></i></span>
+                <div id="upbarr" class="upbar">
+                    <span>
+                        <a title="Home" id="homemenu" class="homemenu"  href="index.html">HOME <i class="fa-solid fa-house"></i></a>
+                    </span>
+                    <span>
+                        <a title="tiket" id="tiket" class="tiket"  href="bookmytbl.html">BOOK MY TABLE <i class="fa-solid fa-utensils"></i></a>
+                    </span>
+                    <span>
+                        <a title="location" id="location" class="location"  href="location.html">LOCATION <i class="fa-solid fa-location-crosshairs"></i></a>
+                    </span>
+                    <span>
+                        <a title="Contact us" id="Contact us" class="Contactus"  href="contact.html">CONTACT US <i class="fa-solid fa-address-book"></i></a>
+                    </span>
+                </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bookmytbl.html">Book my table</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="funfact">
+            <p>
+                People are the core of every business. Businesses are based on relationships, and relationships are based on people. I would go to an average restaurant run by amazing people over an outstanding restaurant run by awful people.
+             </p>
+             <p style="float: right; font-size: 15px; padding-right: 40px;">-Marcus Lemonis</p>
+        </div>
+        <form action="bookmytbl.html" method="get">
+        <button class="bookbtn">Book My Table</button>
+    </form>
+        <p class="copyright">Copyright ©2022 Perform Group. All rights reserved.</p>
+    </div>
+    <script>
+        const openmenu = document.getElementById('openmenu');
+        const closemenu = document.getElementById('closemenu')
+        const upbarr = document.getElementById('upbarr')
+
+        console.log("hello world")
+
+        function opennn(){
+            upbarr.style.display = 'block'
+            closemenu.style.display = 'block'
+            openmenu.style.display = 'none'
+            
+        }
+
+        function closeee(){
+            upbarr.style.display = 'none'
+            closemenu.style.display = 'none'
+            openmenu.style.display = 'block'
+
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
