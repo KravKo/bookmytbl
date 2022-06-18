@@ -10,18 +10,35 @@
 </head>
 <body>
     <div class="background">
-    <nav>
-        <img src="logo1.png" alt="logo">
-        <span class="namelogo">KRAVKO'S food and stay</span>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="bookmytbl.html">Book my table</a></li>
-            <li><a href="location.html">Location</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-          </ul>
-    </nav>
-    <h1 style="text-align:center; padding-top: 50px;">Location</h1>
-    <p style="text-align:center; padding-left: 40%;">This is the Location of our Resturant.</p>
+        <nav>
+            <img src="logo1.png" alt="logo">
+            <span class="namelogo">KRAVKO'S food and stay</span>
+            <span title="open menu" id="openmenu" onclick="opennn()" class="openmenu"><i
+                class="fa-solid fa-bars"></i></span>
+                <span title="move away" id="closemenu" onclick="closeee()" class="closemenu"><i class="fa-solid fa-xmark"></i></span>
+                <div id="upbarr" class="upbar">
+                    <span>
+                        <a title="Home" id="homemenu" class="homemenu"  href="index.html">HOME <i class="fa-solid fa-house"></i></a>
+                    </span>
+                    <span>
+                        <a title="tiket" id="tiket" class="tiket"  href="bookmytbl.html">BOOK MY TABLE <i class="fa-solid fa-utensils"></i></a>
+                    </span>
+                    <span>
+                        <a title="location" id="location" class="location"  href="location.html">LOCATION <i class="fa-solid fa-location-crosshairs"></i></a>
+                    </span>
+                    <span>
+                        <a title="Contact us" id="Contact us" class="Contactus"  href="contact.html">CONTACT US <i class="fa-solid fa-address-book"></i></a>
+                    </span>
+                </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bookmytbl.html">Book my table</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    <h1 style="text-align:center; padding-top: 40px;font-size: 50px;color: #694FB8;text-shadow: 3px 3px white;">Location</h1>
+    <p class="info" style="color: white;text-shadow: 2px 2px 2px rgb(0, 0, 0);">This is the Location of our Resturant.</p>
     
     <iframe class="maploc" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14277.49756519298!2d88.0894164818194!3d26.540237905178483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e5ae830f20bb2f%3A0xbf1e0ca2e4781bbc!2sJhapa%20Bus%20Stand!5e0!3m2!1sen!2snp!4v1655438982353!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class="bottom">
@@ -30,5 +47,6 @@
         <a href="https://www.instagram.com"><span class="insta"><i class="fa-brands fa-instagram"></i></span></a> 
     </div>
 </div>
+<script src="app.js"></script>
 </body>
 </html>
