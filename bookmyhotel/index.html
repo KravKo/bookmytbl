@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book My Resturant</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="icon" type="image/x-icon" href="logo.png">
     <script src="https://kit.fontawesome.com/e509dd28a5.js" crossorigin="anonymous"></script> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
 </head>
@@ -50,30 +50,6 @@
     </form>
         <p class="copyright">Copyright ©2022 Perform Group. All rights reserved.</p>
     </div>
-    <script>
-        const openmenu = document.getElementById('openmenu');
-        const closemenu = document.getElementById('closemenu')
-        const upbarr = document.getElementById('upbarr')
-        upbarr.style.maxHeight = "0%"
-        
-
-        function opennn(){
-                console.log("hello world")
-                upbarr.style.maxHeight = "20%"
-                upbarr.style.display= 'block'
-                closemenu.style.display = 'block'
-                openmenu.style.display = 'none'
-
-        }
-
-        function closeee() {
-                upbarr.style.maxHeight = "0%"
-                upbarr.style.display= 'none'
-                closemenu.style.display = 'none'
-                openmenu.style.display = 'block'    
-        }
-
-
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
