@@ -7,6 +7,14 @@
     font-family: Bebas Neue;
 }
 
+.background{
+    background-image: url(backgroundfood.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 nav{
     width: 100%;
     height: 70px;
@@ -101,7 +109,7 @@ p{
 .bottom{
     padding-top: 10px;
     position: fixed;
-    top: 92%;
+    top: 93%;
     text-align: center;
     width: 100%;
     height: 50px;
@@ -261,6 +269,17 @@ p{
 /*media*/
 
 @media(max-width: 700px){
+    .maploc{
+        position: fixed;
+        top: 30%;
+        left: 2%;
+        width: 96%;
+
+    
+    }
+
+
+
     .funfact p{
         font-size: 15px;
     }
@@ -326,7 +345,16 @@ p{
         width: 40px;
         height: 40px;
     }
-
+    .bottom{
+        padding-top: 10px;
+        position: fixed;
+        top: 94%;
+        text-align: center;
+        width: 100%;
+        height: 50px;
+        background-color: #4C3A51;
+        color: white;
+    }
 
 
 
