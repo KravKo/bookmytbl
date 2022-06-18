@@ -8,8 +8,10 @@
     <title>Book my table</title>
     <link rel="stylesheet" href="bookmytbl.css">
     <link rel="icon" type="image/x-icon" href="logo.png">
-    <script src="https://kit.fontawesome.com/e509dd28a5.js" crossorigin="anonymous"></script> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e509dd28a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
+        integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
 </head>
 
 <body>
@@ -18,22 +20,27 @@
             <img src="logo1.png" alt="logo">
             <span class="namelogo">KRAVKO'S food and stay</span>
             <span title="open menu" id="openmenu" onclick="opennn()" class="openmenu"><i
-                class="fa-solid fa-bars"></i></span>
-                <span title="move away" id="closemenu" onclick="closeee()" class="closemenu"><i class="fa-solid fa-xmark"></i></span>
-                <div id="upbarr" class="upbar">
-                    <span>
-                        <a title="Home" id="homemenu" class="homemenu"  href="index.html">HOME <i class="fa-solid fa-house"></i></a>
-                    </span>
-                    <span>
-                        <a title="tiket" id="tiket" class="tiket"  href="bookmytbl.html">BOOK MY TABLE <i class="fa-solid fa-utensils"></i></a>
-                    </span>
-                    <span>
-                        <a title="location" id="location" class="location"  href="location.html">LOCATION <i class="fa-solid fa-location-crosshairs"></i></a>
-                    </span>
-                    <span>
-                        <a title="Contact us" id="Contact us" class="Contactus"  href="contact.html">CONTACT US <i class="fa-solid fa-address-book"></i></a>
-                    </span>
-                </div>
+                    class="fa-solid fa-bars"></i></span>
+            <span title="move away" id="closemenu" onclick="closeee()" class="closemenu"><i
+                    class="fa-solid fa-xmark"></i></span>
+            <div id="upbarr" class="upbar">
+                <span>
+                    <a title="Home" id="homemenu" class="homemenu" href="index.html">HOME <i
+                            class="fa-solid fa-house"></i></a>
+                </span>
+                <span>
+                    <a title="tiket" id="tiket" class="tiket" href="bookmytbl.html">BOOK MY TABLE <i
+                            class="fa-solid fa-utensils"></i></a>
+                </span>
+                <span>
+                    <a title="location" id="location" class="location" href="location.html">LOCATION <i
+                            class="fa-solid fa-location-crosshairs"></i></a>
+                </span>
+                <span>
+                    <a title="Contact us" id="Contact us" class="Contactus" href="contact.html">CONTACT US <i
+                            class="fa-solid fa-address-book"></i></a>
+                </span>
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="bookmytbl.html">Book my table</a></li>
@@ -41,29 +48,28 @@
                 <li><a href="contact.html">Contact us</a></li>
             </ul>
         </nav>
-    <div class="addmenu">
-        <form action="bookmytbl.html" method="post" >
+        <div class="addmenu">
             <h1 style="margin: 10px;">Book My Table</h1>
             <div class="formm">
                 <h3>Your Name</h3>
-                <input class="name" type="name" placeholder="your name" required>
+                <input id="name" class="name" type="name" placeholder="your name" required>
 
                 <h3 style="padding-top: 20px;">Your Address</h3>
-                <input type="address" placeholder="your address" required>
+                <input id="address" type="address" placeholder="your address" required>
                 <h3 style="padding-top: 20px;">Your phone no</h3>
-                <input type="number" placeholder="Phone no" required>
+                <input id="number" type="number" placeholder="Phone no" required>
                 <h3 style="padding-top: 20px;">Your Email</h3>
-                <input type="email" placeholder="Email">
+                <input id="email" type="email" placeholder="Email">
             </div>
             <div class="sel">
                 <h3>Type:</h3>
-                <select name="Type" required>
+                <select id="typess" name="Type" required>
                     <option value="Table">Table</option>
                     <option value="Room">Room</option>
                     <option value="Hall">Hall</option>
                 </select>
                 <h3 style="padding-top: 20px;">No of people</h3>
-                <select name="No of people" required>
+                <select id="numberofpeople" name="No of people" required>
                     <option value="one">1</option>
                     <option value="two">2</option>
                     <option value="three">3</option>
@@ -76,19 +82,83 @@
                     <option value="ten">10</option>
                     <option value="morethanone">More</option>
                 </select>
-                <h3  style="padding-top: 20px;">Date</h3>
-                <input required type="date">
+                <h3 style="padding-top: 20px;">Date</h3>
+                <input id="date" required type="date">
                 <h3 style="padding-top: 20px;">Time</h3>
-                <input required type="time">
+                <input id="time" required type="time">
             </div>
-            <button class="booktbl">BOOK</button>
-        </form>
+            <button id="bookbtn" class="booktbl">BOOK</button>
+        </div>
+        <div class="menuimg">
+            <img src="menu.jpg" alt="">
+        </div>
     </div>
-    <div class="menuimg">
-        <img src="menu.jpg" alt="">
-    </div>
-</div>
-<script src="app.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyC6iNCA4vaVVe66EP99xQOzYWiB_E9lInA",
+          authDomain: "tablebook-8db32.firebaseapp.com",
+          projectId: "tablebook-8db32",
+          storageBucket: "tablebook-8db32.appspot.com",
+          messagingSenderId: "643803141397",
+          appId: "1:643803141397:web:44568c7704843a2ef1051c"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        import { getDatabase, ref, set, child, update,push, remove} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
+
+        // Initialize Realtime Database and get a reference to the service
+        const db = getDatabase(app);
+
+
+        const bookbtn = document.getElementById('bookbtn')
+        var name = document.getElementById('name')
+        var address = document.getElementById('address')
+        var number = document.getElementById('number')
+        var email = document.getElementById('email')
+        var typess = document.getElementById('typess')
+        var numberofpeople = document.getElementById('numberofpeople')
+        var date = document.getElementById('date')
+        var time = document.getElementById('time')
+
+        function InsertData() {
+            console.log("press")
+
+            const userId = push(child(ref(db), 'post')).key;
+            set(ref(db, 'users/' + userId),{
+                username: name.value,
+                address: address.value,
+                number: number.value,
+                email: email.value,
+                type: typess.value,
+                address: address.value,
+                numberofpeople: numberofpeople.value,
+                date: date.value,
+                time: time.value,
+                
+            })
+                .then(() => {
+                    alert("success")
+                })
+                .catch((error) => {
+                    alert("unsuccess")
+                });
+        }
+
+        bookbtn.addEventListener('click', InsertData);
+
+
+
+    </script>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
