@@ -7,15 +7,6 @@
     font-family: Bebas Neue;
 }
 
-
-.background{
-    background-image: url(backgroundfood.jpeg);
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 nav{
     width: 100%;
     height: 70px;
@@ -67,49 +58,36 @@ h3{
     display: inline-block;
 }
 
-.location{
-    padding-top: 7%;
-    padding-left: 25%;
+.loactionnn{
+    margin-top: 5%;
+    margin-left: 10%;
+    text-align: center;
+    height: 30%;
+    width: 30%;
+    display: inline-block;
 }
-.mobile{
-    padding-left: 20%;
+
+.phonenumber{
+    text-align: center;
+    height: 30%;
+    width: 18%;
+    display: inline-block;
 }
 
 .email{
-    padding-left: 20%;
-}
+    text-align: center;
+    height: 30%;
+    width: 30%;
+    display: inline-block;
 
+}
 
 .main img{
     width: 50px;
     height: 50px;
 }
 
-.addr{
-    padding-left: 25%;
 
-}
-.pho{
-
-    padding-left: 20.7%;
-}
-
-.mail{
-    padding-left: 21.4%;
-
-}
-
-.pone{
-    padding-left: 23%;
-
-}
-.ptwo{
-    padding-left: 16%;
-
-}
-.pthree{
-    padding-left: 14%;
-}
 .info{
     text-align: center;
     display: block;
@@ -158,4 +136,310 @@ p{
     top: 30%;
     height: 60%;
 
+}
+
+
+
+
+/* minimise slidebar*/
+.closemenu{
+    display: none;
+     right: 2%;
+     top: 1%;
+     cursor: pointer;
+     width: 32px;
+     height: 25px;
+     background-color: #694FB8;
+     border: 1px solid white;
+     border-radius: 50%;
+     position: fixed;
+     text-align: center;
+     align-items: center;
+     color: white;
+     font-size: 20px;
+     padding-top: 4px;
+ }
+ 
+ 
+ .openmenu{ 
+     display: none;
+     right: 2%;
+     top: 1%;
+     cursor: pointer;
+     width: 32px;
+     height: 25px;
+     background-color: #694FB8;
+     border: 1px solid white;
+     border-radius: 50%;
+     position: fixed;
+     text-align: center;
+     align-items: center;
+     color: white;
+     font-size: 20px;
+     padding-top: 4px;
+ }
+ 
+ 
+ .homemenu{
+     display: none;
+     position: fixed;
+     right: 2%;
+     top: 6%;
+     cursor: pointer;
+     font-size: 20px;
+     text-decoration: none;
+     color: white;
+ }
+ 
+ .tiket{
+     display: none;
+     position: fixed;
+     right: 2%;
+     top: 11%;
+     cursor: pointer;
+     font-size: 20px;
+     text-decoration: none;
+     color: white;
+ }
+ 
+ .location{
+     display: none;
+     position: fixed;
+     right: 2%;
+     top: 16%;
+     cursor: pointer;
+     font-size: 20px;
+     text-decoration: none;
+     color: white;
+ }
+ 
+ .Contactus{
+ 
+     display: none;
+     position: fixed;
+     right: 2%;
+     top: 21%;
+     cursor: pointer;
+     font-size: 20px;
+     text-decoration: none;
+     color: white;
+ 
+ }
+ 
+ .upbar {
+     display: none;
+     z-index: -10;
+     height: 20%;
+     position: absolute;
+     width: 100%;
+     background-color: #4C3A51;
+     overflow: hidden;
+     transition: .5s;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .namehead{
+    font-size: 40px;
+     text-align: center;
+    padding-top: 70px;
+ }
+
+/*media*/
+
+@media(max-width: 700px){
+    .funfact p{
+        font-size: 15px;
+    }
+    nav img{
+        padding-top: 10px;
+        color: white;
+        height: 25px;
+        width: 25px;
+        padding-left: 5px;
+    }
+    nav ul{
+        display: none;
+        float: right;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        padding-top: 25px;
+    }
+    nav{
+        width: 100%;
+        height: 45px;
+        background-color: #4C3A51;
+        opacity: 0.9;
+    }
+    .namehead{
+        font-size: 35px;
+        padding-top: 70px;
+     }
+
+
+.info{
+    font-size: 15px;
+}
+
+
+
+    .loactionnn{
+        margin-top: 20%;
+        margin-left: 32%;
+        height: 30%;
+        width: 30%;
+        text-align: center;
+    }
+    
+    .phonenumber{
+        margin-top: 10%;
+        text-align: center;
+        margin-left: 38%;
+        height: 30%;
+        width: 18%;
+    }
+    
+    .email{
+        margin-top: 10%;
+        text-align: center;
+        margin-left: 32%;
+        height: 30%;
+        width: 30%;
+    
+    }
+    
+    .main img{
+        width: 40px;
+        height: 40px;
+    }
+
+
+
+
+    /*menu*/
+    .bookbtn{
+        position: fixed;
+        top: 60%;
+        left: 32%;
+        height: 50px;
+        width: 40%;
+        font-size: 18px;
+        border: 1px solid white;
+        border-radius: 50px;
+        color: #ffffff;
+        background-color: #141947;
+    }
+        
+    .closemenu{
+        display: none;
+        right: 2%;
+        top: 1%;
+        cursor: pointer;
+        width: 32px;
+        height: 25px;
+        background-color: #694FB8;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        padding-top: 4px;
+    }
+    
+    
+    .openmenu{ 
+
+        display: block;
+        right: 2%;
+        top: 1%;
+        cursor: pointer;
+        width: 32px;
+        height: 25px;
+        background-color: #694FB8;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        padding-top: 4px;
+    }
+    
+    
+    .homemenu{
+
+        display: block;
+        position: fixed;
+        right: 2%;
+        top: 6%;
+        cursor: pointer;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .tiket{
+        display: block;
+        position: fixed;
+        right: 2%;
+        top: 11%;
+        cursor: pointer;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .location{
+
+        display: block;
+        position: fixed;
+        right: 2%;
+        top: 16%;
+        cursor: pointer;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .Contactus{
+        display: block;
+        position: fixed;
+        right: 2%;
+        top: 21%;
+        cursor: pointer;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    
+    }
+    .upbar {
+        display: none;
+        z-index: -10;
+        height: 20%;
+        position: absolute;
+        width: 100%;
+        background-color: #4C3A51;
+        overflow: hidden;
+        transition: .5s;
+    }
+    
+    
+    
 }
