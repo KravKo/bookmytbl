@@ -7,20 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book my table</title>
     <link rel="stylesheet" href="bookmytbl.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <script src="https://kit.fontawesome.com/e509dd28a5.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="background">
-    <nav>
-        <img src="logo1.png" alt="logo">
-        <span class="namelogo">KRAVKO'S food and stay</span>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="bookmytbl.html">Book my table</a></li>
-            <li><a href="location.html">Location</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <img src="logo1.png" alt="logo">
+            <span class="namelogo">KRAVKO'S food and stay</span>
+            <span title="open menu" id="openmenu" onclick="opennn()" class="openmenu"><i
+                class="fa-solid fa-bars"></i></span>
+                <span title="move away" id="closemenu" onclick="closeee()" class="closemenu"><i class="fa-solid fa-xmark"></i></span>
+                <div id="upbarr" class="upbar">
+                    <span>
+                        <a title="Home" id="homemenu" class="homemenu"  href="index.html">HOME <i class="fa-solid fa-house"></i></a>
+                    </span>
+                    <span>
+                        <a title="tiket" id="tiket" class="tiket"  href="bookmytbl.html">BOOK MY TABLE <i class="fa-solid fa-utensils"></i></a>
+                    </span>
+                    <span>
+                        <a title="location" id="location" class="location"  href="location.html">LOCATION <i class="fa-solid fa-location-crosshairs"></i></a>
+                    </span>
+                    <span>
+                        <a title="Contact us" id="Contact us" class="Contactus"  href="contact.html">CONTACT US <i class="fa-solid fa-address-book"></i></a>
+                    </span>
+                </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bookmytbl.html">Book my table</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
     <div class="addmenu">
         <form action="bookmytbl.html" method="post" >
             <h1 style="margin: 10px;">Book My Table</h1>
@@ -68,6 +88,7 @@
         <img src="menu.jpg" alt="">
     </div>
 </div>
+<script src="app.js"></script>
 </body>
 
 </html>
