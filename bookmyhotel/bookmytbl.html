@@ -15,110 +15,161 @@
 </head>
 
 <body>
-    <div class="background">
-        <nav>
-            <img src="logo1.png" alt="logo">
-            <span class="namelogo">KRAVKO'S food and stay</span>
-            <span title="open menu" id="openmenu" onclick="opennn()" class="openmenu"><i
-                    class="fa-solid fa-bars"></i></span>
-            <span title="move away" id="closemenu" onclick="closeee()" class="closemenu"><i
-                    class="fa-solid fa-xmark"></i></span>
-            <div id="upbarr" class="upbar">
-                <span>
-                    <a title="Home" id="homemenu" class="homemenu" href="index.html">HOME <i
-                            class="fa-solid fa-house"></i></a>
-                </span>
-                <span>
-                    <a title="tiket" id="tiket" class="tiket" href="bookmytbl.html">BOOK MY TABLE <i
-                            class="fa-solid fa-utensils"></i></a>
-                </span>
-                <span>
-                    <a title="location" id="location" class="location" href="location.html">LOCATION <i
-                            class="fa-solid fa-location-crosshairs"></i></a>
-                </span>
-                <span>
-                    <a title="Contact us" id="Contact us" class="Contactus" href="contact.html">CONTACT US <i
-                            class="fa-solid fa-address-book"></i></a>
-                </span>
-            </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="bookmytbl.html">Book my table</a></li>
-                <li><a href="location.html">Location</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-            </ul>
-        </nav>
-        <div class="addmenu">
-            <h1 style="margin: 10px;">Book My Table</h1>
-            <div class="formm">
-                <h3>Your Name</h3>
-                <input id="name" class="name" type="name" placeholder="your name" required>
 
-                <h3 style="padding-top: 20px;">Your Address</h3>
-                <input id="address" type="address" placeholder="your address" required>
-                <h3 style="padding-top: 20px;">Your phone no</h3>
-                <input id="number" type="number" placeholder="Phone no" required>
-                <h3 style="padding-top: 20px;">Your Email</h3>
-                <input id="email" type="email" placeholder="Email">
+
+    <div class="background">
+        <div class="overlays" id="overlays">
+            <nav class="navvv">
+                <img src="logo1.png" alt="logo">
+                <span class="namelogo">KRAVKO'S food and stay</span>
+                <span title="open menu" id="openmenu" onclick="opennn()" class="openmenu"><i
+                        class="fa-solid fa-bars"></i></span>
+                <span title="move away" id="closemenu" onclick="closeee()" class="closemenu"><i
+                        class="fa-solid fa-xmark"></i></span>
+                <div id="upbarr" class="upbar">
+                    <span>
+                        <a title="Home" id="homemenu" class="homemenu" href="index.html">HOME <i
+                                class="fa-solid fa-house"></i></a>
+                    </span>
+                    <span>
+                        <a title="tiket" id="tiket" class="tiket" href="bookmytbl.html">BOOK MY TABLE <i
+                                class="fa-solid fa-utensils"></i></a>
+                    </span>
+                    <span>
+                        <a title="location" id="location" class="location" href="location.html">LOCATION <i
+                                class="fa-solid fa-location-crosshairs"></i></a>
+                    </span>
+                    <span>
+                        <a title="Contact us" id="Contact us" class="Contactus" href="contact.html">CONTACT US <i
+                                class="fa-solid fa-address-book"></i></a>
+                    </span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bookmytbl.html">Book my table</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="addmenu">
+                <h1 style="margin: 10px;">Book My Table</h1>
+                <div class="formm">
+                    <h3>Your Name</h3>
+                    <input id="name" class="name" type="name" placeholder="your name" required>
+
+                    <h3 style="padding-top: 20px;">Your Address</h3>
+                    <input id="address" type="address" placeholder="your address" required>
+                    <h3 style="padding-top: 20px;">Your phone no</h3>
+                    <input id="number" type="number" placeholder="Phone no" required>
+                    <h3 style="padding-top: 20px;">Your Email</h3>
+                    <input id="email" type="email" placeholder="Email">
+                </div>
+                <div class="sel">
+                    <h3>Type:</h3>
+                    <select id="typess" name="Type" required>
+                        <option value="Table">Table</option>
+                        <option value="Room">Room</option>
+                        <option value="Hall">Hall</option>
+                    </select>
+                    <h3 style="padding-top: 20px;">No of people</h3>
+                    <select id="numberofpeople" name="No of people" required>
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                        <option value="six">6</option>
+                        <option value="seven">7</option>
+                        <option value="eight">8</option>
+                        <option value="nine">9</option>
+                        <option value="ten">10</option>
+                        <option value="morethanone">More</option>
+                    </select>
+                    <h3 style="padding-top: 20px;">Date</h3>
+                    <input id="date" required type="date">
+                    <h3 style="padding-top: 20px;">Time</h3>
+                    <input id="time" required type="time">
+
+                </div>
+
+                <h3 style="padding-top: 20px;">message</h3>
+
+                <textarea id="message" rows="4" cols="50" placeholder="Enter Your details"></textarea>
+                <button id="bookbtn" class="booktbl">BOOK</button>
             </div>
-            <div class="sel">
-                <h3>Type:</h3>
-                <select id="typess" name="Type" required>
-                    <option value="Table">Table</option>
-                    <option value="Room">Room</option>
-                    <option value="Hall">Hall</option>
-                </select>
-                <h3 style="padding-top: 20px;">No of people</h3>
-                <select id="numberofpeople" name="No of people" required>
-                    <option value="one">1</option>
-                    <option value="two">2</option>
-                    <option value="three">3</option>
-                    <option value="four">4</option>
-                    <option value="five">5</option>
-                    <option value="six">6</option>
-                    <option value="seven">7</option>
-                    <option value="eight">8</option>
-                    <option value="nine">9</option>
-                    <option value="ten">10</option>
-                    <option value="morethanone">More</option>
-                </select>
-                <h3 style="padding-top: 20px;">Date</h3>
-                <input id="date" required type="date">
-                <h3 style="padding-top: 20px;">Time</h3>
-                <input id="time" required type="time">
+
+            <div class="menuimg">
+                <img src="menu.jpg" alt="">
             </div>
-            <button id="bookbtn" class="booktbl">BOOK</button>
-        </div>
-        <div class="menuimg">
-            <img src="menu.jpg" alt="">
+
+
         </div>
     </div>
+    <div id="popup" class="popup">
+
+        <div id="loading" class="loading">
+            <h1 style="text-align:center; margin-bottom: 20px;">
+                Please Wait...
+            </h1>
+            <div class="gif"><iframe style="border: 0px solid;"
+                    src="https://giphy.com/embed/TvLuZ00OIADoQ" aria-disabled="true"></iframe></div>
+            <p style="text-align: center; margin-top: 30px;">PLease wait....Getting Your Data To server.</p>
+        </div>
+
+
+        <div id="succesfull" class="succesfull">
+            <form action="/bookmyhotel/index.html" method="get">
+                <h1 style="text-align:center; margin-bottom: 20px;">
+                    succesfully Sent
+                </h1>
+                <div class="gif2"><iframe style="border: 0px solid;"
+                        src="https://giphy.com/embed/KBxyo8FDKE33qnj3KB"></iframe></div>
+                <p style="text-align: center; margin-top: 30px;">Click the above button to return back</p>
+                <button id="back">FINISH</button>
+            </form>
+        </div>
+
+        <div id="unsuccessfull" class="unsuccessfull">
+            <form action="/bookmyhotel/bookmytbl.html" method="get">
+                <h1 style="text-align:center; margin-bottom: 20px;">
+                    Unsuccesfull to Send
+                </h1>
+                <div class="gif"><iframe style="border: 0px solid;"
+                        src="https://giphy.com/embed/5ciuhhe0rQva8"></iframe></div>
+                <p style="text-align: center; margin-top: 30px;">There's some problem...PLease Try Again</p>
+                <button id="back">Try Again</button>
+            </form>
+        </div>
+    </div>
+
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
-      
+
         // Your web app's Firebase configuration
         const firebaseConfig = {
-          apiKey: "AIzaSyC6iNCA4vaVVe66EP99xQOzYWiB_E9lInA",
-          authDomain: "tablebook-8db32.firebaseapp.com",
-          projectId: "tablebook-8db32",
-          storageBucket: "tablebook-8db32.appspot.com",
-          messagingSenderId: "643803141397",
-          appId: "1:643803141397:web:44568c7704843a2ef1051c"
+            apiKey: "AIzaSyC6iNCA4vaVVe66EP99xQOzYWiB_E9lInA",
+            authDomain: "tablebook-8db32.firebaseapp.com",
+            projectId: "tablebook-8db32", storageBucket: "tablebook-8db32.appspot.com",
+            messagingSenderId: "643803141397",
+            appId: "1:643803141397:web:44568c7704843a2ef1051c"
         };
-      
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
 
-        import { getDatabase, ref, set, child, update,push, remove} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
+        import { getDatabase, ref, set, child, update, push, remove } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
 
         // Initialize Realtime Database and get a reference to the service
         const db = getDatabase(app);
 
 
         const bookbtn = document.getElementById('bookbtn')
+        var popup = document.getElementById('popup')
+        var overlays = document.getElementById('overlays')
+        var background = document.getElementById('background')
         var name = document.getElementById('name')
         var address = document.getElementById('address')
         var number = document.getElementById('number')
@@ -127,12 +178,28 @@
         var numberofpeople = document.getElementById('numberofpeople')
         var date = document.getElementById('date')
         var time = document.getElementById('time')
+        var message = document.getElementById('message')
+
+        var succesfull = document.getElementById('succesfull')
+        var unsuccessfull = document.getElementById('unsuccessfull')
+        var loading = document.getElementById('loading')
+        
+        
+        popup.style.display = 'none'
+        loading.style.display = 'none'
+        unsuccessfull.style.display = 'none'
+        succesfull.style.display = 'none'
+        overlays.style.display = 'block'
 
         function InsertData() {
+            overlays.style.display = 'none'
+            popup.style.display = 'block'
+            loading.style.display = 'block'
             console.log("press")
 
             const userId = push(child(ref(db), 'post')).key;
-            set(ref(db, 'users/' + userId),{
+            set(ref(db, 'users/' + userId), {
+                userId: userId,
                 username: name.value,
                 address: address.value,
                 number: number.value,
@@ -142,19 +209,30 @@
                 numberofpeople: numberofpeople.value,
                 date: date.value,
                 time: time.value,
-                
+                message: message.value
+
             })
                 .then(() => {
-                    alert("success")
+                    loading.style.display = 'none'
+                    popup.style.display = 'block'
+                    succesfull.style.display = 'block'
                 })
                 .catch((error) => {
-                    alert("unsuccess")
+                    loading.style.display = 'none'
+                    popup.style.display = 'block'
+                    unsuccessfull.style.display = 'block'
+
                 });
         }
 
         bookbtn.addEventListener('click', InsertData);
 
-
+        if (popup.style.display == 'block') {
+            overlays.style.display = 'none'
+        }
+        else {
+            overlays.style.display = 'contents'
+        }
 
     </script>
 
