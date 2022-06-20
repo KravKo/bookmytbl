@@ -205,6 +205,52 @@ nav a:hover{
 }
 
 
+.event{
+    text-shadow: 2px 2px black;
+    color: #ffffff;
+    height: 70%;
+    width: 50%;
+    position: fixed;
+    top: 20%;
+    left: 25%;
+    background-image: url(event.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.event img{
+    height: 60%;
+    width: 40%;
+}
+
+.Topic{
+    padding-left: 10px;
+    padding-top: 10px;
+    z-index: -1;
+    color: white;
+    display: inline-block;
+}
+
+
+.cross{
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+    border: 0 solid;
+    background-color: red;
+    border-radius: 50%;
+    float: right;
+
+}
+
+.cross:hover{
+    color: black;
+    cursor: pointer;
+}
+
+
 
 
 
@@ -229,6 +275,49 @@ nav a:hover{
 /*media*/
 
 @media(max-width: 700px){
+    .event{
+        text-shadow: 2px 2px black;
+        color: #ffffff;
+        height: 50%;
+        width: 90%;
+        position: fixed;
+        top: 20%;
+        left: 5%;
+        background-image: url(event.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .event img{
+        height: 80%;
+        width: 60%;
+    }
+    
+    .Topic{
+        padding-left: 10px;
+        padding-top: 10px;
+        z-index: -1;
+        color: white;
+        display: inline-block;
+    }
+    
+    
+    .cross{
+        height: 25px;
+        width: 25px;
+        margin-right: 10px;
+        margin-top: 10px;
+        color: white;
+        font-size: 20px;
+        border: 0 solid;
+        background-color: red;
+        border-radius: 50%;
+        float: right;
+    
+    }
+
+
+
+
     .navvv{
         position: fixed;
     }
