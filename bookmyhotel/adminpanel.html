@@ -43,11 +43,14 @@
             </thead>
             <tbody class="border">
                 <tr class="border">
-
+                    <td>
+                        <button onclick='Deletee()' id="deletenow" class="deletenow">Delete</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
+    <button onclick='Deletee()' id="deletenow" class="deletenow">Delete</button>
 
 
 </body>
@@ -103,7 +106,8 @@
                 var row = "<tr><td>" + rowNum + "</td><td id='useridd'>" + childData.userId + "</td><td>" + childData.username + "</td><td>" + childData.address + "</td></td>" +
                     "</td><td>" + childData.number + "</td></td>" + "</td><td>" + childData.email + "</td></td>" + "</td><td>" + childData.type + "</td></td>"
                     + "</td><td>" + childData.numberofpeople + "</td></td>" + "</td><td>" + childData.date + "</td></td>"
-                    + "</td><td>" + childData.time + "</td></td>" + "</td><td>" + childData.message + "</td></td>"+ "</td><td><button id='deletenow'>" + "Check" + "</td></td></button>"
+                    + "</td><td>" + childData.time + "</td></td>" + "</td><td>" + childData.message + "</td></td>"
+                    + "</td><td><button id='deletenow' onclick='Deletee()'>" + "" + "</button></td></td>"
 
                 $(row).appendTo('#dataTbl');
 
@@ -118,16 +122,16 @@
     //refresh
     window.onload = load;
 
-
-    var userId = document.getElementById('useridd')
-    console.log(userId.value)
-
     //delete
+
+    function Deletee(){
+        console.log("delete")
+    }
+
+
     const deletenow = document.getElementById('deletenow')
 
     deletenow.addEventListener('click', function(){
-
-        console.log(userId.value)
         var userId = document.getElementById('useridd')
         remove(ref(db, "users/"+userId.value))
         .then(()=>{

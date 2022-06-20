@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Bebas Neue;
 }
 
-.background{
+.background {
     background-image: url(backgroundfood.jpeg);
     width: 100%;
     height: 100vh;
@@ -15,14 +15,14 @@
     background-size: cover;
 }
 
-nav{
+nav {
     width: 100%;
     height: 70px;
     background-color: #4C3A51;
     opacity: 0.9;
 }
 
-nav img{
+nav img {
     padding-top: 10px;
     color: white;
     height: 50px;
@@ -30,13 +30,13 @@ nav img{
     padding-left: 5px;
 }
 
-.namelogo{
-    
+.namelogo {
+
     color: white;
     font-size: 20px;
 }
 
-nav ul{
+nav ul {
     float: right;
     list-style-type: none;
     margin: 0;
@@ -44,12 +44,12 @@ nav ul{
     padding-top: 25px;
 }
 
-nav ul li{
+nav ul li {
     padding-right: 20px;
     display: inline;
 }
 
-nav ul li a{
+nav ul li a {
 
     font-weight: bold;
     color: white;
@@ -57,16 +57,16 @@ nav ul li a{
     text-decoration: none;
 }
 
-nav a:hover{
+nav a:hover {
     color: #e2cdb7;
 }
 
-h3{
+h3 {
     color: #999999;
     display: inline-block;
 }
 
-.loactionnn{
+.loactionnn {
     margin-top: 5%;
     margin-left: 10%;
     text-align: center;
@@ -75,14 +75,14 @@ h3{
     display: inline-block;
 }
 
-.phonenumber{
+.phonenumber {
     text-align: center;
     height: 30%;
     width: 18%;
     display: inline-block;
 }
 
-.email{
+.email {
     text-align: center;
     height: 30%;
     width: 30%;
@@ -90,161 +90,142 @@ h3{
 
 }
 
-.main img{
+.main img {
     width: 50px;
     height: 50px;
 }
 
 
-.info{
+.info {
     text-align: center;
     display: block;
 }
 
-p{
+p {
     font-family: Quicksand;
     display: inline-block;
 }
 
-.bottom{
+.maploc {
+    float: right;
+}
+
+
+
+.bottom {
     padding-top: 10px;
     position: fixed;
-    top: 93%;
+    top: 88%;
     text-align: center;
     width: 100%;
-    height: 50px;
+    height: 80px;
     background-color: #4C3A51;
     color: white;
 }
-.fb{
-    padding-left: 10px; 
 
-}
-
-.insta{
-
-    padding-bottom: 20px;
-
-    padding-left: 10px; 
-}
-
-
-.bottom span{
-    font-size: 30px;
-}
-.bottom a{
+.fb,
+.insta {
+    font-size: 20px;
     color: white;
-    text-decoration: none;
 }
-
-.maploc{
-    border: 2px solid black;
-    position: fixed;
-    left: 30%;
-    top: 30%;
-    height: 60%;
-
-}
-
-
 
 
 /* minimise slidebar*/
-.closemenu{
+.closemenu {
     display: none;
-     right: 2%;
-     top: 1%;
-     cursor: pointer;
-     width: 30px;
-     height: 25px;
-     background-color: #694FB8;
-     border: 1px solid white;
-     border-radius: 50%;
-     position: fixed;
-     text-align: center;
-     align-items: center;
-     color: white;
-     font-size: 20px;
-     padding-top: 4px;
- }
- 
- 
- .openmenu{ 
-     display: none;
-     right: 2%;
-     top: 1%;
-     cursor: pointer;
-     width: 30px;
-     height: 25px;
-     background-color: #694FB8;
-     border: 1px solid white;
-     border-radius: 50%;
-     position: fixed;
-     text-align: center;
-     align-items: center;
-     color: white;
-     font-size: 20px;
-     padding-top: 4px;
- }
- 
- 
- 
- .homemenu{
-     display: none;
-     position: fixed;
-     right: 2%;
-     top: 6%;
-     cursor: pointer;
-     font-size: 20px;
-     text-decoration: none;
-     color: white;
- }
- 
- .tiket{
-     display: none;
-     position: fixed;
-     right: 2%;
-     top: 11%;
-     cursor: pointer;
-     font-size: 20px;
-     text-decoration: none;
-     color: white;
- }
- 
- .location{
-     display: none;
-     position: fixed;
-     right: 2%;
-     top: 16%;
-     cursor: pointer;
-     font-size: 20px;
-     text-decoration: none;
-     color: white;
- }
- 
- .Contactus{
- 
-     display: none;
-     position: fixed;
-     right: 2%;
-     top: 21%;
-     cursor: pointer;
-     font-size: 20px;
-     text-decoration: none;
-     color: white;
- 
- }
- 
- .upbar {
-     display: none;
-     z-index: -10;
-     height: 20%;
-     position: absolute;
-     width: 100%;
-     background-color: #4C3A51;
-     overflow: hidden;
-     transition: .5s;
- }
+    right: 2%;
+    top: 1%;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    background-color: #694FB8;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    padding-top: 4px;
+}
+
+
+.openmenu {
+    display: none;
+    right: 2%;
+    top: 1%;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    background-color: #694FB8;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    padding-top: 4px;
+}
+
+
+
+.homemenu {
+    display: none;
+    position: fixed;
+    right: 2%;
+    top: 6%;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.tiket {
+    display: none;
+    position: fixed;
+    right: 2%;
+    top: 11%;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.location {
+    display: none;
+    position: fixed;
+    right: 2%;
+    top: 16%;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.Contactus {
+
+    display: none;
+    position: fixed;
+    right: 2%;
+    top: 21%;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.upbar {
+    display: none;
+    z-index: -10;
+    height: 20%;
+    position: absolute;
+    width: 100%;
+    background-color: #4C3A51;
+    overflow: hidden;
+    transition: .5s;
+}
 
 
 
@@ -261,17 +242,121 @@ p{
 
 
 
- .namehead{
+.namehead {
     font-size: 40px;
-     text-align: center;
+    text-align: center;
     padding-top: 70px;
- }
+}
+
+
+/*about us wala*/
+.mainimg {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.about {
+    width: 50%;
+    color: white;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.glimps {
+    height: 50%;
+    background-color: #4C3A51;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.glimps h2 {
+    display: flex;
+    color: white;
+}
+
+.glimps img {
+    padding-left: 60px;
+    padding-bottom: 10px;
+}
+
+.owenwr {
+    color: white;
+    width: 50%;
+    display: inline-block;
+}
+
+.owenwr img {
+    text-align: center;
+    padding-left: 250px;
+}
+.maploc {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /*media*/
 
-@media(max-width: 700px){
+@media(max-width: 700px) {
 
-    .navvv{
+    .owenwr {
+        padding-bottom: 20px;
+        padding-left: 10px;
+        color: white;
+        width: 90%;
+        display: inline-block;
+    }
+
+    .owenwr img {
+        text-align: center;
+        padding-left: 100px;
+        display: inline-block;
+    }
+
+
+    .glimps img {
+        padding-left: 100px;
+    }
+
+    .maploc {
+        float: left;
+
+        padding-left: 100px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .mainimg img {
+        padding-top: 40px;
+        width: 100%;
+        height: 20%;
+    }
+
+    .about {
+        width: 95%;
+        color: white;
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        font-size: small;
+    }
+
+    .navvv {
         position: fixed;
     }
 
@@ -287,28 +372,19 @@ p{
     }
 
 
-    .maploc{
-        position: fixed;
-        top: 30%;
-        left: 2%;
-        width: 96%;
-
-    
-    }
-
-
-
-    .funfact p{
+    .funfact p {
         font-size: 15px;
     }
-    nav img{
+
+    nav img {
         padding-top: 10px;
         color: white;
         height: 25px;
         width: 25px;
         padding-left: 5px;
     }
-    nav ul{
+
+    nav ul {
         display: none;
         float: right;
         list-style-type: none;
@@ -316,60 +392,62 @@ p{
         padding: 0;
         padding-top: 25px;
     }
-    nav{
+
+    nav {
         width: 100%;
         height: 45px;
         background-color: #4C3A51;
         opacity: 0.9;
     }
-    .namehead{
+
+    .namehead {
         font-size: 35px;
         padding-top: 70px;
-     }
+    }
 
 
-.info{
-    font-size: 15px;
-}
+    .info {
+        font-size: 15px;
+    }
 
 
 
-    .loactionnn{
+    .loactionnn {
         margin-top: 20%;
         margin-left: 32%;
         height: 30%;
         width: 30%;
         text-align: center;
     }
-    
-    .phonenumber{
+
+    .phonenumber {
         margin-top: 10%;
         text-align: center;
         margin-left: 38%;
         height: 30%;
         width: 18%;
     }
-    
-    .email{
+
+    .email {
         margin-top: 10%;
         text-align: center;
         margin-left: 32%;
         height: 30%;
         width: 30%;
-    
+
     }
-    
-    .main img{
+
+    .main img {
         width: 40px;
         height: 40px;
     }
-    .bottom{
+
+    .bottom {
         padding-top: 10px;
         position: fixed;
-        top: 94%;
         text-align: center;
         width: 100%;
-        height: 50px;
+        height: 80px;
         background-color: #4C3A51;
         color: white;
     }
@@ -377,7 +455,7 @@ p{
 
 
     /*menu*/
-    .bookbtn{
+    .bookbtn {
         position: fixed;
         top: 60%;
         left: 32%;
@@ -389,8 +467,8 @@ p{
         color: #ffffff;
         background-color: #141947;
     }
-        
-    .closemenu{
+
+    .closemenu {
         display: none;
         right: 2%;
         top: 1%;
@@ -407,9 +485,9 @@ p{
         font-size: 20px;
         padding-top: 4px;
     }
-    
-    
-    .openmenu{ 
+
+
+    .openmenu {
 
         display: block;
         right: 2%;
@@ -427,9 +505,9 @@ p{
         font-size: 20px;
         padding-top: 4px;
     }
-    
-    
-    .homemenu{
+
+
+    .homemenu {
 
         display: block;
         position: fixed;
@@ -440,8 +518,8 @@ p{
         text-decoration: none;
         color: white;
     }
-    
-    .tiket{
+
+    .tiket {
         display: block;
         position: fixed;
         right: 2%;
@@ -451,8 +529,8 @@ p{
         text-decoration: none;
         color: white;
     }
-    
-    .location{
+
+    .location {
 
         display: block;
         position: fixed;
@@ -463,8 +541,8 @@ p{
         text-decoration: none;
         color: white;
     }
-    
-    .Contactus{
+
+    .Contactus {
         display: block;
         position: fixed;
         right: 2%;
@@ -473,9 +551,9 @@ p{
         font-size: 20px;
         text-decoration: none;
         color: white;
-    
+
     }
-    
-    
-    
+
+
+
 }

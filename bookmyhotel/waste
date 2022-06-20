@@ -1,0 +1,9 @@
+<h1 style="text-align:center; padding-top: 40px;font-size: 50px;color: #694FB8;text-shadow: 3px 3px white;">Location</h1>
+    <p class="info" style="color: white;text-shadow: 2px 2px 2px rgb(0, 0, 0);">This is the Location of our Resturant.</p>
+    
+    <iframe class="maploc" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14277.49756519298!2d88.0894164818194!3d26.540237905178483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e5ae830f20bb2f%3A0xbf1e0ca2e4781bbc!2sJhapa%20Bus%20Stand!5e0!3m2!1sen!2snp!4v1655438982353!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="bottom">
+        <p>Follow Us On:</p>
+        <a href="https://www.facebook.com/"><span class="fb"><i class="fa-brands fa-facebook"></i></span></a>
+        <a href="https://www.instagram.com"><span class="insta"><i class="fa-brands fa-instagram"></i></span></a> 
+    </div>
