@@ -36,7 +36,8 @@
                                 class="fa-solid fa-utensils"></i></a>
                     </span>
                     <span>
-                        <a title="location" id="location" class="location" href="location.html">About Us <i class="fa-solid fa-address-card"></i></a>
+                        <a title="location" id="location" class="location" href="location.html">About Us <i
+                                class="fa-solid fa-address-card"></i></a>
                     </span>
                     <span>
                         <a title="Contact us" id="Contact us" class="Contactus" href="contact.html">CONTACT US <i
@@ -50,57 +51,61 @@
                     <li><a href="contact.html">Contact us</a></li>
                 </ul>
             </nav>
+
             <div class="addmenu">
-                <h1 style="margin: 10px;">Book My Table</h1>
-                <div class="formm">
-                    <h3>Your Name</h3>
-                    <input id="name" class="name" type="name" placeholder="your name" required>
+                    <h1 style="margin: 10px;">Book My Table</h1>
+                    <div class="formm">
+                        <form action="">
+                        <h3>Your Name</h3>
+                        <input id="name" class="name" type="name" placeholder="your name" required>
 
-                    <h3 style="padding-top: 20px;">Your Address</h3>
-                    <input id="address" type="address" placeholder="your address" required>
-                    <h3 style="padding-top: 20px;">Your phone no</h3>
-                    <input id="number" type="number" placeholder="Phone no" required>
-                    <h3 style="padding-top: 20px;">Your Email</h3>
-                    <input id="email" type="email" placeholder="Email">
-                </div>
-                <div class="sel">
-                    <h3>Type:</h3>
-                    <select id="typess" name="Type" required>
-                        <option value="Table">Table</option>
-                        <option value="Room">Room</option>
-                        <option value="Hall">Hall</option>
-                    </select>
-                    <h3 style="padding-top: 20px;">No of people</h3>
-                    <select id="numberofpeople" name="No of people" required>
-                        <option value="one">1</option>
-                        <option value="two">2</option>
-                        <option value="three">3</option>
-                        <option value="four">4</option>
-                        <option value="five">5</option>
-                        <option value="six">6</option>
-                        <option value="seven">7</option>
-                        <option value="eight">8</option>
-                        <option value="nine">9</option>
-                        <option value="ten">10</option>
-                        <option value="morethanone">More</option>
-                    </select>
-                    <h3 style="padding-top: 20px;">Date</h3>
-                    <input id="date" required type="date">
-                    <h3 style="padding-top: 20px;">Time</h3>
-                    <input id="time" required type="time">
+                        <h3 style="padding-top: 20px;">Your Address</h3>
+                        <input id="address" type="address" placeholder="your address" required>
+                        <h3 style="padding-top: 20px;">Your phone no</h3>
+                        <input id="number" type="number" placeholder="Phone no" required>
+                        <h3 style="padding-top: 20px;">Your Email</h3>
+                        <input id="email" type="email" placeholder="Email"required>
+                    </div>
+                    <div class="sel">
+                        <h3>Type:</h3>
+                        <select id="typess" name="Type" required>
+                            <option value="Table">Table</option>
+                            <option value="Room">Room</option>
+                            <option value="Hall">Hall</option>
+                        </select>
+                        <h3 style="padding-top: 20px;">No of people</h3>
+                        <select id="numberofpeople" name="No of people" required>
+                            <option value="one">1</option>
+                            <option value="two">2</option>
+                            <option value="three">3</option>
+                            <option value="four">4</option>
+                            <option value="five">5</option>
+                            <option value="six">6</option>
+                            <option value="seven">7</option>
+                            <option value="eight">8</option>
+                            <option value="nine">9</option>
+                            <option value="ten">10</option>
+                            <option value="morethanone">More</option>
+                        </select>
+                        <h3 style="padding-top: 20px;">Date</h3>
+                        <input id="date" required type="date">
+                        <h3 style="padding-top: 20px;">Time</h3>
+                        <input id="time" required type="time">
 
-                </div>
+                    </div>
 
-                <h3 style="padding-top: 20px;">message</h3>
+                    <h3 style="padding-top: 20px;">message</h3>
 
-                <textarea id="message" rows="4" cols="50" placeholder="Enter Your details"></textarea>
-                <button id="bookbtn" class="booktbl">BOOK</button>
+                    <textarea id="message" rows="4" cols="50" placeholder="Enter Your details"></textarea>
+                    <button id="bookbtn" class="booktbl" type="submit">BOOK</button>
+
+                </form>
             </div>
+
 
             <div class="menuimg">
                 <img src="menu.jpg" alt="">
             </div>
-
 
         </div>
     </div>
@@ -110,14 +115,14 @@
             <h1 style="text-align:center; margin-bottom: 20px;">
                 Please Wait...
             </h1>
-            <div class="gif"><iframe style="border: 0px solid;"
-                    src="https://giphy.com/embed/TvLuZ00OIADoQ" aria-disabled="true"></iframe></div>
+            <div class="gif"><iframe style="border: 0px solid;" src="https://giphy.com/embed/TvLuZ00OIADoQ"
+                    aria-disabled="true"></iframe></div>
             <p style="text-align: center; margin-top: 30px;">PLease wait....Getting Your Data To server.</p>
         </div>
 
 
         <div id="succesfull" class="succesfull">
-            <form action="/bookmyhotel/index.html" method="get">
+            <form action="/index.html" method="get">
                 <h1 style="text-align:center; margin-bottom: 20px;">
                     succesfully Sent
                 </h1>
@@ -129,7 +134,7 @@
         </div>
 
         <div id="unsuccessfull" class="unsuccessfull">
-            <form action="/bookmyhotel/bookmytbl.html" method="get">
+            <form action="bookmytbl.html" method="get">
                 <h1 style="text-align:center; margin-bottom: 20px;">
                     Unsuccesfull to Send
                 </h1>
@@ -182,21 +187,29 @@
         var succesfull = document.getElementById('succesfull')
         var unsuccessfull = document.getElementById('unsuccessfull')
         var loading = document.getElementById('loading')
-        
-        
+
+
         popup.style.display = 'none'
         loading.style.display = 'none'
         unsuccessfull.style.display = 'none'
         succesfull.style.display = 'none'
         overlays.style.display = 'block'
 
-        function InsertData() {
+        bookbtn.addEventListener('click', ()=> {
+            
+            if (name.value.length == 3) {
+            alert("Please Enter your name")
+        }
+        else{
+            if (number.value.length == 10) {
+
             overlays.style.display = 'none'
             popup.style.display = 'block'
             loading.style.display = 'block'
             console.log("press")
 
-            const userId = push(child(ref(db), 'post')).key;
+
+                const userId = push(child(ref(db), 'post')).key;
             set(ref(db, 'users/' + userId), {
                 userId: userId,
                 username: name.value,
@@ -221,10 +234,23 @@
                     popup.style.display = 'block'
                     unsuccessfull.style.display = 'block'
 
-                });
+                });    
+
+
+
+
+        }else{
+            alert("Please Enter your number")
         }
 
-        bookbtn.addEventListener('click', InsertData);
+        }
+        })
+
+        
+
+           
+
+        
 
         if (popup.style.display == 'block') {
             overlays.style.display = 'none'

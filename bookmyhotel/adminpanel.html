@@ -15,6 +15,10 @@
 
         #deletenow{
             color: white;
+            background-color: red;
+        }
+        #loadtables{
+            color: white;
             background-color: green;
         }
     </style>
@@ -23,6 +27,8 @@
 
 <body>
     <div>
+
+        <button id="loadtables">Loadd</button>
         <table class="table table-dark" id='dataTbl'>
             <thead>
                 <tr>
@@ -44,13 +50,13 @@
             <tbody class="border">
                 <tr class="border">
                     <td>
-                        <button onclick='Deletee()' id="deletenow" class="deletenow">Delete</button>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <button onclick='Deletee()' id="deletenow" class="deletenow">Delete</button>
+    <input type="text" id="Useridvalue">
+    <button  id="deletenow" class="deletenow">Delete</button>
 
 
 </body>
@@ -85,17 +91,19 @@
     const app = initializeApp(firebaseConfig);
 
     // Get a reference to the database service
-    const database = getDatabase(app);
+    const db = getDatabase(app);
 
 
 
 
+    var click = 0;
     // read data
     function load() {
 
+        click =+1;
         $('#dataTbl td').remove();
         var rowNum = 0;
-        const dbRef = ref(database, 'users/');
+        const dbRef = ref(db, 'users/');
 
         onValue(dbRef, (snapshot) => {
             snapshot.forEach((childSnapshot) => {
@@ -106,8 +114,8 @@
                 var row = "<tr><td>" + rowNum + "</td><td id='useridd'>" + childData.userId + "</td><td>" + childData.username + "</td><td>" + childData.address + "</td></td>" +
                     "</td><td>" + childData.number + "</td></td>" + "</td><td>" + childData.email + "</td></td>" + "</td><td>" + childData.type + "</td></td>"
                     + "</td><td>" + childData.numberofpeople + "</td></td>" + "</td><td>" + childData.date + "</td></td>"
-                    + "</td><td>" + childData.time + "</td></td>" + "</td><td>" + childData.message + "</td></td>"
-                    + "</td><td><button id='deletenow' onclick='Deletee()'>" + "" + "</button></td></td>"
+                    + "</td><td>" + childData.time + "</td></td>" + "</td><td>" + childData.message + "</td></td>"+
+                     "</td><td><input type='checkbox'" + "" + "</input></td></tr>"
 
                 $(row).appendTo('#dataTbl');
 
@@ -118,29 +126,22 @@
 
 
     }
-
+    const loadtables = document.getElementById('loadtables')
     //refresh
-    window.onload = load;
+    loadtables.addEventListener('click', load);
 
     //delete
-
-    function Deletee(){
-        console.log("delete")
-    }
-
-
     const deletenow = document.getElementById('deletenow')
-
-    deletenow.addEventListener('click', function(){
-        var userId = document.getElementById('useridd')
-        remove(ref(db, "users/"+userId.value))
+    var Useridvalue = document.getElementById('Useridvalue')
+    deletenow.addEventListener('click',function(){
+        remove(ref(db, "users/"+Useridvalue.value))
         .then(()=>{
             alert("data removed 100%")
         })
         .catch((error)=>{
             alert("Failed to delete")
         })
-    });
+    })
     
     
 </script>
