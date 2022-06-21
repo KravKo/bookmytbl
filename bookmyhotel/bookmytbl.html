@@ -53,53 +53,50 @@
             </nav>
 
             <div class="addmenu">
-                    <h1 style="margin: 10px;">Book My Table</h1>
-                    <div class="formm">
-                        <form action="">
-                        <h3>Your Name</h3>
-                        <input id="name" class="name" type="name" placeholder="your name" required>
+                <h1 style="margin: 10px;">Book My Table</h1>
+                <div class="formm">
+                    <h3>Your Name</h3>
+                    <input id="name" class="name" type="name" placeholder="your name" required>
 
-                        <h3 style="padding-top: 20px;">Your Address</h3>
-                        <input id="address" type="address" placeholder="your address" required>
-                        <h3 style="padding-top: 20px;">Your phone no</h3>
-                        <input id="number" type="number" placeholder="Phone no" required>
-                        <h3 style="padding-top: 20px;">Your Email</h3>
-                        <input id="email" type="email" placeholder="Email"required>
-                    </div>
-                    <div class="sel">
-                        <h3>Type:</h3>
-                        <select id="typess" name="Type" required>
-                            <option value="Table">Table</option>
-                            <option value="Room">Room</option>
-                            <option value="Hall">Hall</option>
-                        </select>
-                        <h3 style="padding-top: 20px;">No of people</h3>
-                        <select id="numberofpeople" name="No of people" required>
-                            <option value="one">1</option>
-                            <option value="two">2</option>
-                            <option value="three">3</option>
-                            <option value="four">4</option>
-                            <option value="five">5</option>
-                            <option value="six">6</option>
-                            <option value="seven">7</option>
-                            <option value="eight">8</option>
-                            <option value="nine">9</option>
-                            <option value="ten">10</option>
-                            <option value="morethanone">More</option>
-                        </select>
-                        <h3 style="padding-top: 20px;">Date</h3>
-                        <input id="date" required type="date">
-                        <h3 style="padding-top: 20px;">Time</h3>
-                        <input id="time" required type="time">
+                    <h3 style="padding-top: 20px;">Your Address</h3>
+                    <input id="address" type="address" placeholder="your address" required>
+                    <h3 style="padding-top: 20px;">Your phone no</h3>
+                    <input id="number" type="number" placeholder="Phone no" required>
+                    <h3 style="padding-top: 20px;">Your Email</h3>
+                    <input id="email" type="email" placeholder="Email" required>
+                </div>
+                <div class="sel">
+                    <h3>Type:</h3>
+                    <select id="typess" name="Type">
+                        <option value="Table">Table</option>
+                        <option value="Room">Room</option>
+                        <option value="Hall">Hall</option>
+                    </select>
+                    <h3 style="padding-top: 20px;">No of people</h3>
+                    <select id="numberofpeople" name="No of people">
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="four">4</option>
+                        <option value="five">5</option>
+                        <option value="six">6</option>
+                        <option value="seven">7</option>
+                        <option value="eight">8</option>
+                        <option value="nine">9</option>
+                        <option value="ten">10</option>
+                        <option value="morethanone">More</option>
+                    </select>
+                    <h3 style="padding-top: 20px;">Date</h3>
+                    <input id="date" required type="date">
+                    <h3 style="padding-top: 20px;">Time</h3>
+                    <input id="time" required type="time">
 
-                    </div>
+                </div>
 
-                    <h3 style="padding-top: 20px;">message</h3>
+                <h3 style="padding-top: 20px;">message</h3>
 
-                    <textarea id="message" rows="4" cols="50" placeholder="Enter Your details"></textarea>
-                    <button id="bookbtn" class="booktbl" type="submit">BOOK</button>
-
-                </form>
+                <textarea id="message" rows="4" cols="50" placeholder="Enter Your details"></textarea>
+                <button id="bookbtn" class="booktbl">BOOK</button>
             </div>
 
 
@@ -122,7 +119,7 @@
 
 
         <div id="succesfull" class="succesfull">
-            <form action="/index.html" method="get">
+            <form action="/bookmyhotel/index.html" method="get">
                 <h1 style="text-align:center; margin-bottom: 20px;">
                     succesfully Sent
                 </h1>
@@ -134,7 +131,7 @@
         </div>
 
         <div id="unsuccessfull" class="unsuccessfull">
-            <form action="bookmytbl.html" method="get">
+            <form action="/bookmyhotel/bookmytbl.html" method="get">
                 <h1 style="text-align:center; margin-bottom: 20px;">
                     Unsuccesfull to Send
                 </h1>
@@ -194,63 +191,54 @@
         unsuccessfull.style.display = 'none'
         succesfull.style.display = 'none'
         overlays.style.display = 'block'
+        function SaveAllItems() {
 
-        bookbtn.addEventListener('click', ()=> {
-            
-            if (name.value.length == 3) {
-            alert("Please Enter your name")
-        }
-        else{
-            if (number.value.length == 10) {
+            if (name.value.length >= 5) {
 
-            overlays.style.display = 'none'
-            popup.style.display = 'block'
-            loading.style.display = 'block'
-            console.log("press")
+                overlays.style.display = 'none'
+                popup.style.display = 'block'
+                loading.style.display = 'block'
+                console.log("press")
 
 
                 const userId = push(child(ref(db), 'post')).key;
-            set(ref(db, 'users/' + userId), {
-                userId: userId,
-                username: name.value,
-                address: address.value,
-                number: number.value,
-                email: email.value,
-                type: typess.value,
-                address: address.value,
-                numberofpeople: numberofpeople.value,
-                date: date.value,
-                time: time.value,
-                message: message.value
+                set(ref(db, 'users/' + userId), {
+                    userId: userId,
+                    username: name.value,
+                    address: address.value,
+                    number: number.value,
+                    email: email.value,
+                    type: typess.value,
+                    address: address.value,
+                    numberofpeople: numberofpeople.value,
+                    date: date.value,
+                    time: time.value,
+                    message: message.value,
+                    check: "&#10060"
 
-            })
-                .then(() => {
-                    loading.style.display = 'none'
-                    popup.style.display = 'block'
-                    succesfull.style.display = 'block'
                 })
-                .catch((error) => {
-                    loading.style.display = 'none'
-                    popup.style.display = 'block'
-                    unsuccessfull.style.display = 'block'
+                    .then(() => {
+                        loading.style.display = 'none'
+                        popup.style.display = 'block'
+                        succesfull.style.display = 'block'
+                    })
+                    .catch((error) => {
+                        loading.style.display = 'none'
+                        popup.style.display = 'block'
+                        unsuccessfull.style.display = 'block'
 
-                });    
+                    });
+
+            }else{
+                alert("Enter Your Name")
+            }
+        };
+
+        bookbtn.addEventListener('click', SaveAllItems);
 
 
 
 
-        }else{
-            alert("Please Enter your number")
-        }
-
-        }
-        })
-
-        
-
-           
-
-        
 
         if (popup.style.display == 'block') {
             overlays.style.display = 'none'

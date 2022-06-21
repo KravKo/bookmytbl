@@ -21,6 +21,11 @@
             color: white;
             background-color: green;
         }
+
+        #checknow{
+            color: white;
+            background-color: rgb(123, 0, 255);
+        }
     </style>
 
 </head>
@@ -55,9 +60,13 @@
             </tbody>
         </table>
     </div>
-    <input type="text" id="Useridvalue">
-    <button  id="deletenow" class="deletenow">Delete</button>
 
+    <input type="text" id="checko" placeholder="UserId From Above">
+    <button  id="checknow" class="checknow">Check</button>
+<br>
+
+    <input type="text" id="Useridvalue" placeholder="UserId From Above">
+    <button  id="deletenow" class="deletenow">Delete</button>
 
 </body>
 
@@ -72,7 +81,7 @@
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-    import { getDatabase, set, ref, push, child, onValue, remove } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+    import { getDatabase, set, ref, push, child, onValue, remove, update} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
@@ -115,7 +124,7 @@
                     "</td><td>" + childData.number + "</td></td>" + "</td><td>" + childData.email + "</td></td>" + "</td><td>" + childData.type + "</td></td>"
                     + "</td><td>" + childData.numberofpeople + "</td></td>" + "</td><td>" + childData.date + "</td></td>"
                     + "</td><td>" + childData.time + "</td></td>" + "</td><td>" + childData.message + "</td></td>"+
-                     "</td><td><input type='checkbox'" + "" + "</input></td></tr>"
+                     "</td><td> <span>" + childData.check + "</span></td></tr>"
 
                 $(row).appendTo('#dataTbl');
 
@@ -137,11 +146,29 @@
         remove(ref(db, "users/"+Useridvalue.value))
         .then(()=>{
             alert("data removed 100%")
+            Useridvalue.innerHTML = "ok"
         })
         .catch((error)=>{
             alert("Failed to delete")
         })
     })
     
-    
+
+    //check
+
+    const checknow = document.getElementById('checknow')
+    var check = document.getElementById('checko')
+    checknow.addEventListener('click',function(){
+        update(ref(db, "users/"+check.value),{
+            check: "&#9745"
+        })
+        .then(()=>{
+            alert("Checked")
+            check.innerHTML = ""
+        })
+        .catch((error)=>{
+            alert("Failed to checked")
+        })
+
+    })
 </script>
