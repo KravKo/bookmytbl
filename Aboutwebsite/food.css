@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Bebas Neue;
+    color: white;
+}
+
+.background {
+    background-image: url(backgroundfood.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: #4C3A51;
+    opacity: 0.9;
+}
+
+nav img {
+    padding-top: 10px;
+    color: white;
+    height: 50px;
+    width: 50px;
+    padding-left: 5px;
+}
+
+.namelogo {
+
+    color: white;
+    font-size: 20px;
+}
+
+nav ul {
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 25px;
+}
+
+nav ul li {
+    padding-right: 20px;
+    display: inline;
+}
+
+nav ul li a {
+
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #e2cdb7;
+}
+
+h3 {
+    color: #f2f2f2;
+    display: inline-block;
+}
+
+.loactionnn {
+    margin-top: 5%;
+    margin-left: 10%;
+    text-align: center;
+    height: 30%;
+    width: 30%;
+    display: inline-block;
+}
+
+.phonenumber {
+    text-align: center;
+    height: 30%;
+    width: 18%;
+    display: inline-block;
+}
+
+.email {
+    text-align: center;
+    height: 30%;
+    width: 30%;
+    display: inline-block;
+
+}
+
+.main img {
+    width: 50px;
+    height: 50px;
+}
+
+
+.info {
+    text-align: center;
+    display: block;
+}
+
+p {
+    font-family: Quicksand;
+    display: inline-block;
+}
+
+.maploc {
+    float: right;
+}
+
+
+
+.bottom {
+
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    background-color: #4C3A51;
+    color: white;
+}
+
+.fb,
+.insta {
+    font-size: 20px;
+    color: white;
+}
+
+
+/* minimise slidebar*/
+.closemenu {
+    display: none;
+    right: 2%;
+    top: 1%;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    background-color: #694FB8;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    padding-top: 4px;
+}
+
+
+.openmenu {
+    display: none;
+    right: 2%;
+    top: 1%;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    background-color: #694FB8;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    padding-top: 4px;
+}
+
+
+
+.homemenu {
+    display: none;
+    position: fixed;
+    right: 2%;
+    top: 6%;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.tiket {
+    display: none;
+    position: fixed;
+    right: 2%;
+    top: 11%;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.location {
+    display: none;
+    position: fixed;
+    right: 2%;
+    top: 16%;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.Contactus {
+
+    display: none;
+    position: fixed;
+    right: 2%;
+    top: 21%;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.upbar {
+    display: none;
+    z-index: -10;
+    height: 20%;
+    position: absolute;
+    width: 100%;
+    background-color: #4C3A51;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+
+.prdouct-o{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display:inline-block;
+    margin-top: 30px;
+    margin-left: 30px;
+    text-align: center;
+    height: 200px;
+    width: 180px;
+    background-color: #4C3A51;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.prdouct-o:hover{
+    cursor: pointer;
+     transform: scale(1.1);
+
+}
+
+.texts{
+    display: inline;
+}
+
+.name{
+    font-size: 20px;
+    margin-left: 30px ;
+}
+
+.prdouct-o img{
+    border-radius: 10px;
+    height: 120px;
+    width: 160px;
+    margin-top: 20px;
+}
+
+.prdouct-o b{
+    margin-right: 60px;
+    font-size: 20px;
+}
+
+.images:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.namehead {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 70px;
+}
+
+
+/*about us wala*/
+.mainimg {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.about {
+    width: 50%;
+    color: white;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.glimps {
+    height: 50%;
+    background-color: #4C3A51;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.glimps h2 {
+    display: flex;
+    color: white;
+}
+
+.glimps img {
+    padding-left: 60px;
+    padding-bottom: 10px;
+}
+
+.owenwr {
+    color: white;
+    width: 50%;
+    display: inline-block;
+}
+
+.owenwr img {
+    text-align: center;
+    padding-left: 250px;
+}
+.maploc {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*media*/
+
+@media(max-width: 700px) {
+
+
+.bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    background-color: #4C3A51;
+    color: white;
+}
+
+.fb,
+.insta {
+    font-size: 20px;
+    color: white;
+}
+
+
+.prdouct-o img{
+    border-radius: 10px;
+    height: 100px;
+    width: 140px;
+    margin-top: 20px;
+}
+
+.prdouct-o b{
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+
+    .prdouct-o{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        display:inline-block;
+        margin-top: 60px;
+        margin-left: 17px;
+        text-align: center;
+        height: 185px;
+        width: 160px;
+        background-color: #4C3A51;
+        border-radius: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+
+    .owenwr {
+        padding-bottom: 20px;
+        padding-left: 10px;
+        color: white;
+        width: 90%;
+        display: inline-block;
+    }
+
+    .owenwr img {
+        text-align: center;
+        padding-left: 100px;
+        display: inline-block;
+    }
+
+
+    .glimps img {
+        padding-left: 100px;
+    }
+
+    .maploc {
+        float: left;
+
+        padding-left: 100px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .mainimg img {
+        padding-top: 40px;
+        width: 100%;
+        height: 20%;
+    }
+
+    .about {
+        width: 95%;
+        color: white;
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        font-size: small;
+    }
+
+    .navvv {
+        position: fixed;
+    }
+
+    .upbar {
+        display: none;
+        z-index: -10;
+        height: 100%;
+        position: fixed;
+        width: 100%;
+        background-color: #4C3A51;
+        overflow: hidden;
+        transition: .5s;
+    }
+
+
+    .funfact p {
+        font-size: 15px;
+    }
+
+    nav img {
+        padding-top: 10px;
+        color: white;
+        height: 25px;
+        width: 25px;
+        padding-left: 5px;
+    }
+
+    nav ul {
+        display: none;
+        float: right;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        padding-top: 25px;
+    }
+
+    nav {
+        width: 100%;
+        height: 45px;
+        background-color: #4C3A51;
+        opacity: 0.9;
+    }
+
+    .namehead {
+        font-size: 35px;
+        padding-top: 70px;
+    }
+
+
+    .info {
+        font-size: 15px;
+    }
+
+
+
+    .loactionnn {
+        margin-top: 20%;
+        margin-left: 32%;
+        height: 30%;
+        width: 30%;
+        text-align: center;
+    }
+
+    .phonenumber {
+        margin-top: 10%;
+        text-align: center;
+        margin-left: 38%;
+        height: 30%;
+        width: 18%;
+    }
+
+    .email {
+        margin-top: 10%;
+        text-align: center;
+        margin-left: 32%;
+        height: 30%;
+        width: 30%;
+
+    }
+
+    .main img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+
+    /*menu*/
+    .bookbtn {
+        position: fixed;
+        top: 60%;
+        left: 32%;
+        height: 50px;
+        width: 40%;
+        font-size: 18px;
+        border: 1px solid white;
+        border-radius: 50px;
+        color: #ffffff;
+        background-color: #141947;
+    }
+
+    .closemenu {
+        display: none;
+        right: 2%;
+        top: 1%;
+        cursor: pointer;
+        width: 32px;
+        height: 25px;
+        background-color: #694FB8;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        padding-top: 4px;
+    }
+
+
+    .openmenu {
+
+        display: block;
+        right: 2%;
+        top: 1%;
+        cursor: pointer;
+        width: 32px;
+        height: 25px;
+        background-color: #694FB8;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        padding-top: 4px;
+    }
+
+
+    .homemenu {
+
+        display: block;
+        position: fixed;
+        right: 2%;
+        top: 8%;
+        cursor: pointer;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .tiket {
+        display: block;
+        position: fixed;
+        right: 2%;
+        top: 13%;
+        cursor: pointer;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .Contactus {
+        display: block;
+        position: fixed;
+        right: 2%;
+        top: 18%;
+        cursor: pointer;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+
+    }
+
+
+
+}
