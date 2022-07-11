@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click To Earn - krishav Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body bgcolor="#ec593c">
+    <nav class="navvv">
+        <img src="imgs/logo.png" alt="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bookmytbl.html">Games</a></li>
+            <li><a href="location.html">Blogs</a></li>
+            <li><a href="contact.html">Portfolio</a></li>
+        </ul>
+    </nav>
+    <div id="storage" class="storage">
+        <div class="score">
+            <h1>Score:</h1>
+            <h1 id="scorep">00</h1>
+        </div>
+        <div class="timer">
+            <h1>Time:</h1>
+            <h1 id="timer">30</h1>
+        </div>
+        <div class="higest">
+            <h1>High Score:</h1>
+            <h1 id="hscore">00</h1>
+            <p class="alert" id="alert"></p>
+        </div>
+    </div>
+    <div id="main" class="main">
+        <center><button class="btnf" id="btnf">START</button></center>
+        <center> <button id="btn" class="btn">Click Me!</button></center>
+        <center> <button id="savebtn" class="btn">Save</button></center>
+    </div>
+    <div id="rules" class="rules">
+        <h1>RUELS For The Game:</h1>
+        <ul>
+            <li>Lorem ipsum dolor sit aiusto ab officiis volup</li>
+            <li>Lorem ipsum dolor sit aiusto ab officiis volup Lorem ipsum cupiditate.</li>
+            <li>Lorem ipsum dolor sit aiusto ab officiis volup Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit aiusto </li>
+        </ul>
+        <button id="letsplay">Play</button>
+    </div>
+    <div class="ranks">
+        <h2>OUR TOP SCORER:</h2>
+        <div class="first">
+            <img src="imgs/1st.png" alt="">
+            <h1 id="usernamse">Kravko</h1>
+            <p id="1stscore">20</p>
+        </div>
+
+    </div>
+    <div class="bottom"></div>
+    <div class="popup">
+        <div id="back" class="back">
+            <div id="poparea" class="poparea">
+                <center>
+                    <h1>Congratulation!!</h1>
+                    <h3 id="newrankpop">Your The New Leader!!</h3>
+                    <p>UserName *</p>
+                    <input id="username" type="username" placeholder="Your UserName" required><br>
+                    <p>Esewa Name *</p>
+                    <input id="esewaname" type="text" placeholder="Your Esewa Name" required><br>
+                    <p>Esewa Number *</p>
+                    <input id="esewano" type="number" placeholder="Your Esewa Number" required><br>
+                    <button id="save">Save</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+    import { getDatabase, get, set, ref, push, child, onValue, remove, update } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyAlZUbxMjfUYKuyNQuhsRD0F-TyoMdm9QI",
+        authDomain: "guessit-c526a.firebaseapp.com",
+        databaseURL: "https://guessit-c526a-default-rtdb.firebaseio.com",
+        projectId: "guessit-c526a",
+        storageBucket: "guessit-c526a.appspot.com",
+        messagingSenderId: "149565317863",
+        appId: "1:149565317863:web:a1d3b464c3596428b03842"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    // Get a reference to the database service
+    const db = getDatabase(app);
+
+    //popup call
+    let back = document.getElementById('back');
+    let poparea = document.getElementById('poparea');
+    let newrankpop = document.getElementById('newrankpop');
+    let username = document.getElementById('username');
+    let esewaname = document.getElementById('esewaname')
+    let esewa = document.getElementById('esewano')
+    let btn = document.getElementById('btn');
+    let btnf = document.getElementById('btnf');
+    let savebtn = document.getElementById('savebtn');
+    let save = document.getElementById('save');
+    let score = document.getElementById('scorep')
+    let hscore = document.getElementById('hscore')
+    let details = document.getElementById('details')
+
+    var elem = document.getElementById('timer');
+    var point = 0;
+    var higest = 0;
+    var wrecord = 0;
+    function timer() {
+        var timeleft = 29;
+        var downloadTimer = setInterval(function () {
+            if (timeleft <= -1) {
+                clearInterval(downloadTimer);
+                btnf.style.display = 'block';
+                btn.style.display = 'none';
+                if (higest <= point) {
+                    higest = point;
+                    hscore.innerHTML = higest;
+                    document.getElementById('alert').innerHTML = "New Record!"
+                }
+
+                if (point > wrecord) {
+                    newrankpop.innerHTML = "Your New Rank Is 1st."
+                    console.log('first');
+                    poparea.classList.toggle('active');
+                    back.classList.toggle('active');
+                }
+
+
+
+            } else {
+                elem.innerHTML = timeleft;
+            }
+            timeleft -= 1;
+        }, 500);
+    }
+
+    save.addEventListener('click', function () {
+        update(ref(db, "1st/"), {
+            esewa: esewa.value,
+            name: esewaname.value,
+            username: username.value,
+            score: point
+        })
+            .then(() => {
+                alert("data added 100%")
+
+                location.reload();
+            })
+            .catch((error) => {
+                alert("Failed to delete")
+            });
+    })
+
+    let usernamse = document.getElementById('usernamse')
+    let fscore = document.getElementById('1stscore');
+    let wrname = "";
+
+    function onload() {
+        const dbref = ref(db);
+        
+        get(child(dbref,"1st/")).then((snapshot)=>{
+                wrname = snapshot.val().username;
+                wrecord = snapshot.val().score;
+                console.log(wrecord)
+                fscore.innerHTML = wrecord;
+                usernamse.innerHTML = wrname;
+        })
+    }
+
+    window.onload = onload();
+
+
+    btnf.addEventListener('click', function () {
+        document.getElementById('alert').innerHTML = ""
+        btnf.style.display = 'none';
+        btn.style.display = 'block';
+        point = 0;
+        score.innerHTML = point;
+        timer();
+    })
+
+    btn.addEventListener('click', function () {
+        point = point + 1;
+        score.innerHTML = point;
+    })
+
+
+    let letsplay = document.getElementById('letsplay');
+    let rulesarea = document.getElementById('rules');
+    let mainarea = document.getElementById('main');
+    let storagearea = document.getElementById('storage');
+
+    letsplay.addEventListener('click', function () {
+        rulesarea.classList.toggle('active');
+        mainarea.classList.toggle('active');
+        storagearea.classList.toggle('active');
+    })
+
+
+
+
+
+</script>
+
+</html>
