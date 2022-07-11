@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(219, 219, 219);
+    border: 1px solid #F56526;
+    border-radius: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: white;
+}
+
+::-webkit-scrollbar-track{
+
+    margin-top: 1px;
+    margin-bottom: 10px;
+}
+*{
+    color: white;
+    background-color: #F56526;
+}
+
+
+.main{
+    height: 100vh;
+    width: 100%;
+}
+#chance{
+    padding: 5px;
+    border: 2px solid white;
+    font-family: 'Fjalla One', sans-serif;
+    margin-left: 20%;
+    margin-top: 10%;
+    display: inline-block;
+    font-size: 20px;
+
+}
+#score{
+    padding: 5px;
+    border: 2px solid white;
+    font-size: 20px;
+    display: inline-block;
+    font-family: 'Fjalla One', sans-serif;
+    margin-left: 50%;
+}
+
+.head{
+    font-family: 'Fjalla One', sans-serif;
+    margin-left: 20%;
+}
+.area {
+    outline: none;
+    margin-top: 10%;
+    height: 25px;
+    width: 25px;
+    font-size: 25px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: white;
+    font-family: 'Titan One', cursive;
+    color: black;
+}
+
+#check {
+    margin-left: 40%;
+}
+
+.noti {
+    font-family: 'Varela Round', sans-serif;
+    margin-left:47%;
+}
+
+#checkbtn{
+    border: 2px solid white;
+    background-color: red;
+    height: 45px;
+    width: 150px;
+    font-family: 'Fjalla One', sans-serif;
+    margin-left: 43.8%;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#checkbtn:hover{
+    cursor: pointer;
+    background-color: rgb(250, 52, 52);
+}
