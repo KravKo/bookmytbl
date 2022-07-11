@@ -37,9 +37,21 @@
     <div id="main" class="main">
         <center><button class="btnf" id="btnf">START</button></center>
         <center> <button id="btn" class="btn">Click Me!</button></center>
-        <center> <button id="savebtn" class="btn">Save</button></center>
     </div>
+    <center>
+        <div class="ranks">
+            <h2>OUR TOP SCORER:</h2>
+            <div class="first">
+                <img src="imgs/1st.png" alt="">
+                <h1 id="usernamse">Kravko</h1>
+                <p id="1stscore">20</p>
+            </div>
+        </div>
+    </center>
     <div id="rules" class="rules">
+
+
+    <button id="letsplay">Play</button>
         <h1>RUELS For The Game:</h1>
         <ul>
             <li>Lorem ipsum dolor sit aiusto ab officiis volup</li>
@@ -47,20 +59,18 @@
             <li>Lorem ipsum dolor sit aiusto ab officiis volup Lorem ipsum dolor sit amet.</li>
             <li>Lorem ipsum dolor sit aiusto </li>
         </ul>
-        <button id="letsplay">Play</button>
     </div>
-    <div class="ranks">
-        <h2>OUR TOP SCORER:</h2>
-        <div class="first">
-            <img src="imgs/1st.png" alt="">
-            <h1 id="usernamse">Kravko</h1>
-            <p id="1stscore">20</p>
-        </div>
 
-    </div>
     <div class="bottom"></div>
     <div class="popup">
         <div id="back" class="back">
+            <center>
+                <div class="retry" id="retry">
+                    <h1>YOU FAILED!!</h1>
+                    <h3>Try Again!</h3>
+                    <button id="tryagaina">TRY AGAIN</button>
+                </div>
+            </center>
             <div id="poparea" class="poparea">
                 <center>
                     <h1>Congratulation!!</h1>
@@ -113,6 +123,7 @@
     //popup call
     let back = document.getElementById('back');
     let poparea = document.getElementById('poparea');
+    let retry = document.getElementById('retry')
     let newrankpop = document.getElementById('newrankpop');
     let username = document.getElementById('username');
     let esewaname = document.getElementById('esewaname')
@@ -124,7 +135,7 @@
     let score = document.getElementById('scorep')
     let hscore = document.getElementById('hscore')
     let details = document.getElementById('details')
-
+    const tryagain = document.getElementById('tryagaina')
     var elem = document.getElementById('timer');
     var point = 0;
     var higest = 0;
@@ -143,10 +154,13 @@
                 }
 
                 if (point > wrecord) {
-                    newrankpop.innerHTML = "Your New Rank Is 1st."
                     console.log('first');
                     poparea.classList.toggle('active');
                     back.classList.toggle('active');
+                }
+                else {
+                    retry.style.display = 'block';
+                    back.style.display = 'block'
                 }
 
 
@@ -157,6 +171,12 @@
             timeleft -= 1;
         }, 500);
     }
+
+    tryagain.addEventListener('click', function () {
+        retry.style.display = 'none';
+        back.style.display = 'none'
+    })
+
 
     save.addEventListener('click', function () {
         update(ref(db, "1st/"), {
@@ -181,13 +201,13 @@
 
     function onload() {
         const dbref = ref(db);
-        
-        get(child(dbref,"1st/")).then((snapshot)=>{
-                wrname = snapshot.val().username;
-                wrecord = snapshot.val().score;
-                console.log(wrecord)
-                fscore.innerHTML = wrecord;
-                usernamse.innerHTML = wrname;
+
+        get(child(dbref, "1st/")).then((snapshot) => {
+            wrname = snapshot.val().username;
+            wrecord = snapshot.val().score;
+            console.log(wrecord)
+            fscore.innerHTML = wrecord;
+            usernamse.innerHTML = wrname;
         })
     }
 
