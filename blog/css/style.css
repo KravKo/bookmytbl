@@ -84,7 +84,6 @@ nav a:hover {
     height: 40px;
 }
 
-
 .score {
     text-align: center;
     background-color: #ec593c;
@@ -106,6 +105,12 @@ nav a:hover {
 }
 
 .btn {
+
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
     display: none;
     width: 20vw;
     height: 20vw;
@@ -118,11 +123,18 @@ nav a:hover {
     font-size: 40px;
     margin-top: 80px;
     align-items: center;
+    outline: 0;
 }
 
 
 .btnf {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
     display: block;
+    outline: 0;
     width: 20vw;
     height: 20vw;
     border-radius: 50%;

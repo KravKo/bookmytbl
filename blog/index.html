@@ -76,7 +76,7 @@
                     <h1>Congratulation!!</h1>
                     <h3 id="newrankpop">Your The New Leader!!</h3>
                     <p>UserName *</p>
-                    <input id="username" type="username" placeholder="Your UserName" required><br>
+                    <input id="username" type="username" placeholder="Your UserName" maxlength="6" required><br>
                     <p>Esewa Name *</p>
                     <input id="esewaname" type="text" placeholder="Your Esewa Name" required><br>
                     <p>Esewa Number *</p>
@@ -144,6 +144,7 @@
         var timeleft = 29;
         var downloadTimer = setInterval(function () {
             if (timeleft <= -1) {
+                onload();
                 clearInterval(downloadTimer);
                 btnf.style.display = 'block';
                 btn.style.display = 'none';
@@ -155,12 +156,12 @@
 
                 if (point > wrecord) {
                     console.log('first');
-                    poparea.classList.toggle('active');
-                    back.classList.toggle('active');
+                    poparea.style.display = 'block';
+                    back.style.display = 'block';
                 }
                 else {
                     retry.style.display = 'block';
-                    back.style.display = 'block'
+                    back.style.display = 'block';
                 }
 
 
@@ -198,9 +199,9 @@
     let usernamse = document.getElementById('usernamse')
     let fscore = document.getElementById('1stscore');
     let wrname = "";
-
     function onload() {
         const dbref = ref(db);
+        console.log('aayohai guys')
 
         get(child(dbref, "1st/")).then((snapshot) => {
             wrname = snapshot.val().username;
@@ -208,6 +209,8 @@
             console.log(wrecord)
             fscore.innerHTML = wrecord;
             usernamse.innerHTML = wrname;
+
+
         })
     }
 
@@ -221,6 +224,7 @@
         point = 0;
         score.innerHTML = point;
         timer();
+        onload()
     })
 
     btn.addEventListener('click', function () {
@@ -235,6 +239,7 @@
     let storagearea = document.getElementById('storage');
 
     letsplay.addEventListener('click', function () {
+        onload();
         rulesarea.classList.toggle('active');
         mainarea.classList.toggle('active');
         storagearea.classList.toggle('active');
